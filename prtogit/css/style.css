@@ -1,0 +1,406 @@
+/* Custom Navbar */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Pastikan navbar memiliki tinggi konsisten */
+}
+
+/* Setiap Section Fullscreen */
+section {
+  min-height: calc(100vh - 80px); /* Kurangi tinggi navbar */
+  padding: 0; /* Atur padding agar tidak berlebih */
+  margin: 0 auto; /* Pusatkan konten */
+  width: 100%; /* Pastikan lebarnya 100% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image Styling */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar Icon Adjustments */
+.nav-link i {
+  font-size: 22px;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.nav-link:hover i {
+  transform: scale(1.2);
+}
+
+/* Horizontal Scroll for Projects Section */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Navbar collapse text color */
+.navbar-collapse {
+  background-color: #ffcc0000; /* Warna background saat hamburger terbuka */
+}
+
+/* Warna teks link navbar */
+.navbar-nav .nav-link {
+  color: #333; /* Warna teks default */
+  font-weight: 500; /* Tebal font agar lebih terbaca */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Warna teks saat hover */
+  
+}
+
+/* Navbar-toggler-icon adjustment */
+.navbar-toggler-icon {
+  width: 30px; /* Atur ukuran yang sesuai */
+  height: 30px; 
+  background-size: contain; /* Memastikan icon sepenuhnya terlihat */
+  background-repeat: no-repeat;
+  background-position: center; /* Pastikan icon selalu di tengah */
+  margin-right: 0; /* Hilangkan margin jika tidak diperlukan */
+  padding: 5px; /* Beri sedikit ruang dalam icon */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 10px 15px; /* Sesuaikan padding untuk layar kecil */
+}
+
+/* Responsiveness untuk layar kecil */
+@media (max-width: 576px) {
+  .navbar-toggler-icon {
+    width: 25px; /* Sesuaikan ukuran icon */
+    height: 25px;
+  }
+
+  .navbar {
+    padding: 8px 10px; /* Kurangi padding navbar */
+  }
+}
+
+
+/* Optional: Navbar branding adjustment */
+.navbar-brand {
+  font-weight: bold; /* Menegaskan brand */
+  color: #ffffff; /* Warna teks brand */
+}
+
+.navbar-brand:hover {
+  color: #676767; /* Warna saat hover pada brand */
+}
+
+
+  
+  
+
+/* Styling for About Section */
+ #about {
+ padding: 80px 0; /* Padding atas dan bawah */
+ background: linear-gradient(135deg, #fffde7, #fff8e1); /* Gradasi putih-kuning */
+ color: #333; /* Warna teks yang tetap mudah dibaca */
+}
+      
+
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #333;
+}
+
+#about p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Gambar dengan Persentase */
+#about img {
+  width: 100%; /* Gambar memenuhi 100% dari kolom saat di layar besar */
+  max-width: 600px; /* Batasi gambar agar tidak terlalu besar */
+  height: auto; /* Proporsi tetap */
+  display: block;
+  margin: 0 auto; /* Agar gambar berada di tengah */
+}
+
+
+
+/* Media Queries untuk Gambar Responsif */
+@media (max-width: 1200px) { /* Laptop */
+  #about img {
+    width: 80%; /* Mengecil menjadi 80% */
+  }
+}
+
+@media (max-width: 992px) { /* Tablet */
+  #about .container {
+    flex-direction: column-reverse; /* Teks di atas gambar */
+    text-align: center;
+  }
+  #about img {
+    width: 70%; /* Lebih kecil */
+  }
+}
+
+@media (max-width: 768px) { /* Large Phones */
+  #about img {
+    width: 60%; /* Mengecil sesuai ukuran ponsel besar */
+  }
+}
+
+@media (max-width: 576px) { /* Small Phones */
+  #about img {
+    width: 50%; /* Ukuran terkecil untuk ponsel kecil */
+  }
+}
+
+
+
+
+  /* Style for Skills Section */
+#skills {
+    background: linear-gradient(45deg, #f8f9fa, #edf5fb);
+    padding: 80px 0;
+  }
+  
+  #skills h2 {
+    font-weight: bold;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .skill-card {
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-card img {
+    transition: all 0.3s;
+    border-radius: 10px;
+  }
+  
+  .skill-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .skill-card h5 {
+    margin-top: 15px;
+    color: #495057;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+/* Projects Section */
+#projects {
+  padding: 100px 20px; /* Mengurangi padding agar sesuai di mobile */
+  background: linear-gradient(135deg, #fffde7, #fff8e1);
+}
+
+/* Wrapper untuk card - Mengatur agar bisa di-scroll secara horizontal */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* Beri jarak antar kartu */
+  padding-bottom: 30px;
+  scroll-snap-type: x mandatory; /* Memungkinkan scroll snap */
+  -webkit-overflow-scrolling: touch; /* Memperbaiki scroll di iOS */
+}
+
+.card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  flex: 0 0 auto;
+  width: 250px;
+  min-width: 250px;
+  max-width: 300px;
+  box-sizing: border-box; /* Memastikan padding tidak mempengaruhi lebar */
+  scroll-snap-align: start; /* Snap ke awal saat di-scroll */
+}
+
+/* Gaya untuk gambar kartu */
+.card img {
+  object-fit: cover;
+  width: 100%; /* Gambar mengikuti lebar card */
+  height: 180px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-text {
+  word-wrap: break-word; /* Membuat kata-kata panjang terpotong dengan rapi */
+  white-space: normal; /* Memastikan teks mengikuti lebar container */
+  overflow-wrap: break-word; /* Mengatasi teks panjang agar tidak keluar dari container */
+  line-height: 1.5; /* Memberikan jarak antar-baris untuk keterbacaan */
+}
+
+
+/* Hover effect */
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness - Atur layout pada layar lebih kecil */
+@media (max-width: 768px) {
+  #projects {
+    padding: 60px 10px;
+  }
+
+  .card {
+    width: 80%; /* Card lebih besar di layar kecil */
+    min-width: auto; /* Hapus batas minimal */
+  }
+}
+
+
+/* Timeline Default */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Icon Styling */
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  align-items: auto;
+  justify-content: auto;
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Timeline Content */
+.timeline-content {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  flex-grow: 1; /* Allow content to grow in flex layout */
+}
+
+/* Connector Line */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% - 60px);
+  background-color: #007bff;
+}
+
+/* Header and Paragraph Styles */
+.timeline h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeline p {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column; /* Change to vertical layout */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .timeline-icon {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add space below icon */
+  }
+
+  .timeline-item::before {
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Adjust for centering */
+    top: 0; /* Start the line at the top */
+    height: 100%; /* Stretch the line fully */
+  }
+
+  .timeline-content {
+    max-width: 100%; /* Ensure content takes full width */
+  }
+}
+
+
+
+footer {
+  background-color: #343a40; /* Warna latar belakang footer */
+}
+
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 15px; /* Jarak bawah heading */
+}
+
+footer .social-icons a {
+  font-size: 24px; /* Ukuran ikon media sosial */
+  transition: transform 0.3s; /* Efek transisi saat hover */
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.2); /* Besar ikon saat hover */
+}
+
+footer p {
+  margin-top: 20px; /* Jarak atas untuk teks copyright */
+  font-size: 14px; /* Ukuran font copyright */
+}
