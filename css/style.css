@@ -64,6 +64,7 @@ section {
 .navbar-nav .nav-link {
   color: #333; /* Warna teks default */
   font-weight: 500; /* Tebal font agar lebih terbaca */
+  margin-left: 20px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -75,6 +76,7 @@ section {
 .navbar-toggler-icon {
   width: 30px; /* Atur ukuran yang sesuai */
   height: 30px; 
+  
   background-size: contain; /* Memastikan icon sepenuhnya terlihat */
   background-repeat: no-repeat;
   background-position: center; /* Pastikan icon selalu di tengah */
@@ -233,6 +235,7 @@ section {
     text-transform: uppercase;
   }
   
+  
 /* Projects Section */
 #projects {
   padding: 100px 20px; /* Mengurangi padding agar sesuai di mobile */
@@ -270,6 +273,8 @@ section {
   border-top-right-radius: 15px;
 }
 
+
+
 .card-text {
   word-wrap: break-word; /* Membuat kata-kata panjang terpotong dengan rapi */
   white-space: normal; /* Memastikan teks mengikuti lebar container */
@@ -283,19 +288,44 @@ section {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.skill-badge {
+  background-color: #f8f9fa; /* Light background */
+  border: 1px solid #007bff; /* Bootstrap primary color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for a better look */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skill-badge:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: white; /* Change text color on hover */
+  transform: translateY(-3px); /* Slightly raise the badge */
+}
+
+
 /* Responsiveness - Atur layout pada layar lebih kecil */
 @media (max-width: 768px) {
   #projects {
     padding: 60px 10px;
   }
 
+  .skill-badge {
+    padding: 8px 16px;
+  }
+
   .card {
     width: 80%; /* Card lebih besar di layar kecil */
     min-width: auto; /* Hapus batas minimal */
   }
+  
 }
 
 
+#education {
+  background: linear-gradient(45deg, #f8f9fa, #edf5fb);
+  padding: 80px 0;
+}
 /* Timeline Default */
 .timeline {
   position: relative;
@@ -383,24 +413,17 @@ section {
 
 
 footer {
-  background-color: #343a40; /* Warna latar belakang footer */
+  background: #343a40; /* Dark background */
 }
 
-footer h5 {
-  font-weight: bold;
-  margin-bottom: 15px; /* Jarak bawah heading */
+.social-icons a {
+  transition: transform 0.3s; /* Smooth hover effect */
 }
 
-footer .social-icons a {
-  font-size: 24px; /* Ukuran ikon media sosial */
-  transition: transform 0.3s; /* Efek transisi saat hover */
+.social-icons a:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-footer .social-icons a:hover {
-  transform: scale(1.2); /* Besar ikon saat hover */
-}
-
-footer p {
-  margin-top: 20px; /* Jarak atas untuk teks copyright */
-  font-size: 14px; /* Ukuran font copyright */
+hr {
+  margin: 2rem 0; /* Spacing for horizontal rule */
 }
